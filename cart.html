@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>UPMC | Cart</title>
+<title>UPMC Pharmacy</title>
+<link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
+<script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
 <script>
 function multiply(quantiBox1,quantiBox2,total) {
 	
@@ -24,74 +29,162 @@ function multiply(quantiBox1,quantiBox2,total) {
 	totalObj.style.display = 'block';
 }
 </script>
-<script src="js/vendor/modernizr.js"></script>
-<script src="js/vendor/modernizr.js"></script>
 <script type="text/javascript" src ="../Super8_Task4-/js/test.js"></script>
-
 </head>
 
 <body>
-
-<!- top bar>
 <div class="large-12 columns">
-  <div class="row">
-    <div class="large-12 columns">
-      <nav class="top-bar" data-topbar>
-        <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
-        <div class="large-8 columns">
-          <input type="search" 
-                        	   maxlength="200"  
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar>
+      <div class="large-2 columns"> <img src="images/upmc_logo.jpg"> </div>
+      <div class="large-8 columns">
+        <input type="search"   
                                name="searchTerm" 
                                placeholder="What are you looking for?" 
                                autocomplete="off" 
                                autocapitalize="off" 
                                autocorrect="off" 
-                               data-options='{"limit":3}'
+                               data-options="{'limit':3}"
 							   data-touch-text="What are you looking for?" maxlength="100"/>
-        </div>
-        <div class="large-2 columns">
-          <a href="searchResultPage.html">
-        	<input id="goButton" type="submit" value="go"/> </a>
-        </div>
-      </nav>
-    </div>
+      </div>
+      <div class="large-2 columns">
+      	<a href="searchResultPage.html">
+        <input id="goButton" type="submit" value="go"/> </a>
+      </div>
+    </nav>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <nav class="top-bar" data-topbar>
-        <section class="top-bar-section">
-          <ul class="left">
-            <li class="divider"></li>
-            <li class="has-dropdown"> <a href="#">Menu</a>
-              <ul class="dropdown">
-                <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
-                <li><a href="searchResultPage.html">Braces & Support</a></li>
-                <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
-                <li><a href="searchResultPage.html">Digestive Health</a></li>
-                <li><a href="searchResultPage.html">First Aid</a></li>
-                <li><a href="searchResultPage.html">Pain & Fever</a></li>
-                <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
-                <li><a href="searchResultPage.html">Stop Smoking</a></li>
-              </ul>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="divider"></li>
+          <li class="has-dropdown"> <a href="#">Menu</a>
+            <ul class="dropdown">
+              <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
+              <li><a href="searchResultPage.html">Braces & Support</a></li>
+              <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
+              <li><a href="searchResultPage.html">Digestive Health</a></li>
+              <li><a href="searchResultPage.html">First Aid</a></li>
+              <li><a href="searchResultPage.html">Pain & Fever</a></li>
+              <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
+              <li><a href="searchResultPage.html">Stop Smoking</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+        </ul>
+        <ul class="right">
+          <li class="divider"></li>
+          <li >
+  <div id="loginContainer" style="color:white">Hello Mike!<a href = "javascript:void(0)" title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
+              <div id="loginContainerSub" class="white_contentLogin">                   
+								<div id="loginStepContainer">
+									<div>
+										<strong>Email</strong><br />
+										<input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
+									</div>
+									<br />
+									<div>
+										<strong>Password</strong><br />
+										<input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
+									</div>
+									<div>
+										<input type="checkbox" style="color:white"/> Remember me
+									</div>
+									<form method="post" action="index.html">
+										<div>
+											<input name="btnLogin" type="submit" id="btnLogin" value="Login" /><br />
+										</div>
+									</form>
+									<div id="assistMessage">
+										<a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
+										<a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free
+									</div>
+								</div>
+              </div>
+              </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+           <li>
+              <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
+              <div id="registerContainerSub" class="white_content">
+                <table width="625" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td id="tdEmailErrorScope" colspan="2"><strong>Email</strong><br />
+                      <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
+                          onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
+                      <div id="divEmailErrorMsg" class="errorMsg"> <br />
+                        please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
+                    <td></td>
+                    <td></td>
+                    <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td id="tdPasswordErrorScope"><strong>Password</strong>
+                      <input name="txtFirstPassword" type="password"   id="txtFirstPassword" placeholder="Password" size="15" maxlength=	"20" value="" /></td>
+                    <td id="tdPasswordErrorScope"><strong>Confirm Password</strong>
+                      <input name="txtRePassword" type="password" id="txtRePassword" size="15" maxlength="20" placeholder="Confirm Password"
+                       onblur= "validatePassword('txtFirstPassword' ,'txtRePassword', 'tdPasswordErrorScope', 'spnPasswordErrorMsg')" /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><div id="spnPasswordErrorMsg" class="errorMsg"> Entered passwords are not matched </div></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr>
+                    <td><strong>First Name</strong>
+                      <input name="txtFN" type="text" id="txtFN" size="30" placeholder="First Name" /></td>
+                    <td><strong>Last Name</strong>
+                      <input name="txtLN" type="text" id="txtLN" size="30" placeholder="Last Name" /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><strong>Address </strong><br />
+                      <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Street"/>
+                      <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Apartment Number"/>
+                      <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City"/>
+                      <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal"/>
+                      <select name="ddlCountry" id="ddlCountry" style="width:200px">
+                        <option>United States</option>
+                        <option>Others</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
+                      I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
+                  </tr>
+                  <tr>
+                    <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick=							"fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
+                  </tr>
+                </table>
+              </div>
+              <div id="regCompMsg" style="display:none; height:540px"; class="white_content">
+              	<br />
+                <br />
+                <br />
+                <br />
+                <strong style="font-size:16px">Registration complete, </strong><br />
+                <br />
+                Thank you very much for registering with UPMC.<br />
+                Please click the "Done" button below to close this registration page. <br />
+                To start login, please use "Login" button at top right corner. <br />
+                <br />
+                <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
+              </div>
             </li>
-            
-          </ul>
-          <ul class="right">
-            <li class="divider"></li>
-            <li><a href="#">Login</a></li>
-            <li class="divider"></li>
-            <li class="divider"></li>
-            <li> <a href="registration.html"> Registration</a> </li>
-            <li class="divider"></li>
-            <li class="divider"></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li class="divider"></li>
-          </ul>
-        </section>
-      </nav>
-    </div>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li class="divider"></li>
+        </ul>
+      </section>
+    </nav>
   </div>
-  <div class="row">
+</div>
+
+<div class="row">
     <div class="large-4 small-12 columns">
       <div class="hide-for-small panel">
         <h3>My Cart</h3>
@@ -108,11 +201,10 @@ function multiply(quantiBox1,quantiBox2,total) {
     <div class="large-8 columns">
       <div class="row">
         <div class="large-2 columns small-3"> <img/> </div>
-        <div><br></div>
-        <div class="large-3 columns" style="align-self:right">
+        <div class="large-3 columns" style="align-self:left">
           <p><a href="#">Product Name</a></p>
         </div>
-        <div class="large-3 columns" style="text-align:right">
+        <div class="large-3 columns" style="text-align:left">
           <p><a href="#">Price</a></p>
         </div>
         <div class="small-2 columns" style="align-self:flex-start">
@@ -122,9 +214,9 @@ function multiply(quantiBox1,quantiBox2,total) {
       <div class="row">
         <hr/>
         <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"> <img src="images/vitamin1.jpg"/> </div>
+          <div class="large-2 columns small-3"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a> </div>
           <div class="large-3 columns" style="text-align:left">
-            <p><strong>Prevagen </strong></p>
+            <p><a href="product detail_1.html"><strong>Prevagen </strong></a></p>
           </div>
           <div class="large-3 columns" style="text-align:left">
             <p>$13.99</p>
@@ -136,9 +228,9 @@ function multiply(quantiBox1,quantiBox2,total) {
         </div>
         <hr/>
         <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"><img src="images/vitamin3.jpg"/></div>
+          <div class="large-2 columns small-3"><a href="product detail_2.html"><img src="images/vitamin3.jpg"/></a></div>
           <div class="large-3 columns" style="text-align:left">
-            <p><strong>Natures Bounty</strong></p>
+            <p><a href="product detail_2.html"><strong>Natures Bounty</strong></a></p>
           </div>
           <div class="large-3 columns" style="text-align:left">
             <p>$13.99</p>
@@ -154,6 +246,7 @@ function multiply(quantiBox1,quantiBox2,total) {
     </div>
   </div>
 </div>
+
 <footer class="row">
         <div class="large-12 columns">
           <hr>
@@ -171,5 +264,6 @@ function multiply(quantiBox1,quantiBox2,total) {
           </div>
         </div>
         </footer>
+</div>
 </body>
 </html>
